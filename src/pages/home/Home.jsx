@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import bg from '../../assets/bg0.gif'
 import './Home.css'
 import { Catagory } from '../../Category'
+import { items } from '../../items'
 import Product from '../../components/Product/Product'
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
       </div>
       <div className="category-section">
         {
-          Catagory.slice(0, 5).map((product) => {
+          items.slice(0, 5).map((product) => {
             return (
               <div key={product.id} className="category-card" onClick={()=>{
                 filteredProducts(product.category)
